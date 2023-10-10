@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eMobilis</title>
+    {% load  static %}
+    <!--start of js connection-->
+    <script src="{% static 'bootstrap/js/jquery-3.4.0.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <!--    end of connection-->
+
+    <!--    start of css connection-->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+
+    <!--    end of css bootstrap-->
+</head>
+<body>
+<section>
+    <h1 class="head1">eMobilis Coding School</h1>
+    <div class="buttons">
+    <a target="_blank" href="{% url 'home-url' %}"><button class="btn btn-info">Home</button></a>
+    <a target="_blank" href=" "><button class="btn btn-success">About</button></a>
+    <a target="_blank" href=" "><button class="btn btn-danger">Gallery</button></a>
+    <a target="_blank" href="{% url 'register-url' %}"><button class="btn btn-secondary">Register</button></a>
+    <a target="_blank" href=" "><button class="btn btn-warning">Login</button></a>
+</div>
+    <hr class="horizontal">
+
+    {% block content %}
+
+    {% endblock %}
+</section>
+</body>
+</html>

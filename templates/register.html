@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+    <form method="post" class="my-form" action="{% url 'register-url' %}">
+    {% csrf_token %}
+        <label>
+            <input name="name" class="my-input"  required placeholder="Enter name" type="text">
+        </label><br><br>
+        <label>
+            <input name="email" class="my-input" required  placeholder="Enter email" type="email">
+        </label><br><br>
+        <label>
+            <input name="password" class="my-input" required placeholder="Enter password" type="password">
+        </label><br><br>
+    <input  class="my-btn" value="Register" type="submit">
+</form>
+
+
+{% endblock %}
